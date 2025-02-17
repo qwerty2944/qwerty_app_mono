@@ -1,0 +1,4 @@
+name: qwerty_app_mono
+packages:
+  - apps/*
+  - packages/*
