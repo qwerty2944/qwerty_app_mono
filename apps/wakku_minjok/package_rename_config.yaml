@@ -1,0 +1,10 @@
+# dart run package_rename
+package_rename_config:
+  android:
+    app_name: 와꾸의 민족
+    package_name: com.wakku.minjok
+
+  ios:
+    app_name: 와꾸의 민족
+    bundle_name: WakkuMinjok
+    package_name: com.wakku.minjok
