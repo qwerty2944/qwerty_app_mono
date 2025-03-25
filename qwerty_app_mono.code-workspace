@@ -1,0 +1,64 @@
+{
+  "folders": [
+    {
+      "name": "💝 우리의 디데이",
+      "path": "apps/our_dday"
+    },
+    {
+      "name": "🍜 와꾸민족",
+      "path": "apps/wakku_minjok"
+    },
+    {
+      "name": "📦 공유 패키지",
+      "path": "packages"
+    }
+  ],
+  "settings": {
+    "dart.flutterSdkPath": ".fvm/flutter_sdk",
+    "dart.sdkPath": ".fvm/flutter_sdk/bin/cache/dart-sdk",
+    "search.exclude": {
+      "**/.git": true,
+      "**/.svn": true,
+      "**/.hg": true,
+      "**/CVS": true,
+      "**/.DS_Store": true,
+      "**/tmp": true,
+      "**/bower_components": true,
+      "**/node_modules": true,
+      "**/.pub-cache": true,
+      "**/.pub": true,
+      "**/build": true,
+      "**/.dart_tool": true
+    },
+    "files.exclude": {
+      "**/.git": true,
+      "**/.svn": true,
+      "**/.hg": true,
+      "**/CVS": true,
+      "**/.DS_Store": true,
+      "**/tmp": true,
+      "**/bower_components": true,
+      "**/node_modules": true,
+      "**/.pub-cache": true,
+      "**/.pub": true,
+      "**/build": true,
+      "**/.dart_tool": true
+    }
+  },
+  "launch": {
+    "configurations": [
+      {
+        "name": "💝 우리의 디데이",
+        "type": "dart",
+        "request": "launch",
+        "program": "apps/our_dday/lib/main.dart"
+      },
+      {
+        "name": "🍜 와꾸민족",
+        "type": "dart",
+        "request": "launch",
+        "program": "apps/wakku_minjok/lib/main.dart"
+      }
+    ]
+  }
+} 

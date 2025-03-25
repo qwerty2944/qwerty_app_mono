@@ -1,0 +1,85 @@
+# This file configures the analyzer, which statically analyzes Dart code to
+# check for errors, warnings, and lints.
+#
+# The issues identified by the analyzer are surfaced in the UI of Dart-enabled
+# IDEs (https://dart.dev/tools#ides-and-editors). The analyzer can also be
+# invoked from the command line by running `flutter analyze`.
+
+# The following line activates a set of recommended lints for Flutter apps,
+# packages, and plugins designed to encourage good coding practices.
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  language:
+    # null safety 관련 엄격한 타입 체크 활성화
+    strict-casts: true
+    strict-raw-types: true
+  errors:
+    # freezed 등의 코드 생성기에서 발생하는 어노테이션 경고 무시
+    invalid_annotation_target: ignore
+
+linter:
+  # The lint rules applied to this project can be customized in the
+  # section below to disable rules from the `package:flutter_lints/flutter.yaml`
+  # included above or to enable additional rules. A list of all available lints
+  # and their documentation is published at https://dart.dev/lints.
+  #
+  # Instead of disabling a lint rule for the entire project in the
+  # section below, it can also be suppressed for a single line of code
+  # or a specific dart file by using the `// ignore: name_of_lint` and
+  # `// ignore_for_file: name_of_lint` syntax on the line or in the file
+  # producing the lint.
+  rules:
+    # 여러 줄의 파라미터, 컬렉션 등에서 마지막 요소에 콤마를 강제
+    # 이는 git diff를 깔끔하게 만들고, 요소 추가/제거를 쉽게 만듦
+    require_trailing_commas: true
+
+
+    # 파라미터가 2개 이상일 때 무조건 줄바꿈 강제
+    cascade_invocations: true
+
+    # 생성자 호출시 파라미터 줄바꿈 강제
+    prefer_constructors_over_static_methods: true
+
+    # # 한 줄로 표현 가능한 함수는 화살표 구문(=>)을 사용하도록 강제
+    # # 예: void foo() => print('hello');
+    # prefer_expression_function_bodies: true
+
+    # 문자열에 작은따옴표(') 사용을 강제
+    # 예: 'hello' (O), "hello" (X)
+    prefer_single_quotes: true
+
+    # 모든 변수와 파라미터의 타입을 명시적으로 지정하도록 강제
+    # 예: String name (O), var name (X)
+    always_specify_types: true
+
+    # required 파라미터를 일반 named 파라미터보다 앞에 배치하도록 강제
+    # 예: ({required String name, int? age})
+    always_put_required_named_parameters_first: true
+
+    # 모든 함수의 반환 타입을 명시적으로 지정하도록 강제
+    # 예: int getValue() (O), getValue() (X)
+    always_declare_return_types: true
+
+    # import 문을 종류별로 정렬하도록 강제
+    # dart, flutter, package, relative 순서로 정렬
+    directives_ordering: true
+
+    # Future를 await 없이 사용할 때 경고
+    # 예: future.then((value) => ...); 대신 await future; 사용 권장
+    unawaited_futures: true
+
+    # 불필요한 괄호 사용 금지
+    # 예: if ((a == b)) -> if (a == b)
+    unnecessary_parenthesis: true
+
+    # 불필요한 문자열 보간 사용 금지
+    # 예: '${'hello'}' -> 'hello'
+    unnecessary_string_interpolations: true
+
+    # 생성자에서 super 파라미터 구문 사용을 권장
+    # 예: super.key 대신 super.key 사용
+    use_super_parameters: true
+
+# Additional information about this file can be found at
+# https://dart.dev/guides/language/analysis-options
